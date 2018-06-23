@@ -1,0 +1,22 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "node_modules/"
+  ],
+  "verbose": true,
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "events": {
+    "restart": "osascript -e 'display notification \"App restarted due to: react-ssr\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "watch": [
+    "build/"
+  ],
+  "env": {
+    "NODE_ENV": "development",
+    "PORT": 3000
+  },
+  "ext": "js,jsx,json"
+}

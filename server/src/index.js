@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const React = require('react');
 const { renderToString } = require('react-dom/server');
 
-const Home = require('./client/components/Home').default;
+const Home = require('./client/components/Home.jsx').default;
 
 const { init, logging, logger } = require('../config');
 
