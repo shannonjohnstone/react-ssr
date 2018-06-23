@@ -5,7 +5,7 @@ import { logger } from '../utils/logging';
 const About = () => (
   <LayoutMain>
     <h1>
-      About...
+      Users...
     </h1>
     <div>
       <button type="button" onClick={() => logger.log('clicking...')}>
