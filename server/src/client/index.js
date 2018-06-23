@@ -4,4 +4,4 @@ import ReactDOM from 'react-dom';
 
 import Home from './components/Home';
 
-ReactDOM.hydrate(<Home />, document.querySelector('#root'));
+ReactDOM.hydrate(<Home />, document.querySelector('#root')); // eslint-disable-line;
