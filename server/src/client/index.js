@@ -1,7 +1,11 @@
 // entry for client side application
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
 
-import Home from './components/Home';
-
-ReactDOM.hydrate(<Home />, document.querySelector('#root')); // eslint-disable-line;
+ReactDOM.hydrate(
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>, document.querySelector('#root'),
+);

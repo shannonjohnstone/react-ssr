@@ -3,6 +3,7 @@
   "plugins": ["react", "jsx-a11y"],
   "extends": ["airbnb"],
   "rules": {
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": 0
   }
 }

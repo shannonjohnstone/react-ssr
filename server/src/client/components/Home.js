@@ -1,8 +1,9 @@
 import React from 'react';
+import LayoutMain from './LayoutMain';
 import { logger } from '../utils/logging';
 
 const Home = () => (
-  <div>
+  <LayoutMain>
     <h1>
       This is home
     </h1>
@@ -14,7 +15,7 @@ const Home = () => (
         press me!
       </button>
     </div>
-  </div>
+  </LayoutMain>
 );
 
 export default Home;
