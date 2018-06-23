@@ -1,15 +1,18 @@
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import Routes from '../client/routes';
 
-export const renderer = (req) => {
+export const renderer = (req, store) => {
   const content = renderToString(
     // location uses req to look at browser url and determin which route to render
-    <StaticRouter location={req.path} context={{}}>
-      <Routes />
-    </StaticRouter>,
+    <Provider>
+      <StaticRouter location={req.path} context={{}}>
+        <Routes />
+      </StaticRouter>
+    </Provider>,
   );
 
   return (`
