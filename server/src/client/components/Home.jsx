@@ -1,4 +1,5 @@
 import React from 'react';
+import { logger } from '../utils/logging';
 
 const Home = () => (
   <div>
@@ -8,6 +9,11 @@ const Home = () => (
     <p>
       This is the home page being rendered for the server....
     </p>
+    <div>
+      <button type="button" onClick={() => logger.log('clicking...')}>
+        press me!
+      </button>
+    </div>
   </div>
 );
 
