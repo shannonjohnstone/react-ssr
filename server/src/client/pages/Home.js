@@ -1,6 +1,7 @@
 import React from 'react';
-import LayoutMain from './LayoutMain';
+import LayoutMain from '../components/LayoutMain';
 import { logger } from '../utils/logging';
+import { exportPage } from './utils';
 
 const Home = () => (
   <LayoutMain>
@@ -18,4 +19,4 @@ const Home = () => (
   </LayoutMain>
 );
 
-export default Home;
+export default exportPage(Home);

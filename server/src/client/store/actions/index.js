@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://react-ssr-api.herokuapp.com/';
+const API_BASE_URL = 'http://react-ssr-api.herokuapp.com';
 
 export const FETCH_USERS = 'fetch_users';
 

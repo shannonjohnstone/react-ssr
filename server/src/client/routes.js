@@ -1,11 +1,23 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import Home from './components/Home';
-import Users from './components/Users';
+import { renderRoutes } from 'react-router-config';
+import Home from './pages/Home';
+import UsersList from './pages/UsersList';
 
-export default () => (
-  <main>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/users" component={Users} />
-  </main>
-);
+/* routes
+ * using renderRoutes to configure a routes array to have more control
+ */
+
+export const routes = [
+  {
+    path: '/',
+    exact: true,
+    ...Home,
+  },
+  {
+    loadData: UsersList.loadData,
+    path: '/users',
+    exact: true,
+    ...UsersList,
+  },
+];
+
+export default () => renderRoutes(routes);
